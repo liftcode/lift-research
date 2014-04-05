@@ -1,0 +1,619 @@
+------------------------------------------------------------------------------------
+[0] Intro: Data Dictionary for Lift's Quantified Diet
+
+This includes an explanation for the columns in quantified.diet.results.csv and for the location of data in the five surveys that participants filled out. Note, some of the data from the surveys was redacted for privacy reasons.
+------------------------------------------------------------------------------------
+
+
+------------------------------------------------------------------------------------
+[1] Randomized Control:
+
+This section includes which diets participants agreed to try, which one they were assigned to, and whether they accepted their assigment. For experimental purposes, we're ignoring people who didn't accept at least one control and then also accept their assigned diet.
+------------------------------------------------------------------------------------
+
+1.A: Diets were assigned by an evenly weighted randomization algorithm. The below columns cover the diets that a person was randomly assigned to, whether a person accepted that diet, and if not, which diet they selected instead.
+
+column: diet_randomly_assigned_id
+column: diet_randomly_assigned_name
+column: accepted_assigned_diet
+column: overridden_diet_id
+
+1.B These columns show which diets a person indicated that they'd be willling to do.
+column: eligible_diet_glutenfree
+column: eligible_diet_paleo
+column: eligible_diet_sleep
+column: eligible_diet_wholefoods
+column: eligible_diet_slowcarb
+column: eligible_diet_vegetarian
+column: eligible_diet_caloriecounting
+column: eligible_diet_dash
+column: eligible_diet_reading
+column: eligible_diet_floss
+column: eligible_diet_mindfuleating
+column: eligible_diet_nosweets
+values: 0:no 1:yes
+
+
+------------------------------------------------------------------------------------
+[2] Quantified Diet: Starting Survey
+
+This survey was delivered immediately after signing up and was meant to be taken as soon as person had a scale.
+------------------------------------------------------------------------------------
+
+2.A: What is your sex? *
+column: gender_day0
+values:
+  1: Male
+  0: Female
+  _: Prefer not to answer
+
+2.B: How much of the time during the past 4 weeks did you have a lot of energy? *
+column: energy_level_day0
+values: 
+  5: Almost all of the time
+  4: Most of the time
+  3: A good bit of the time
+  2: A little of the time
+  1: None of the time
+
+2.C: Taken all together, how would you say things are these days - would you say that you are: *
+column: redacted
+
+2.D: Who do you live with? *
+column: who_live_with_day0
+values: 
+  Living alone
+  Living with someone
+  Living with spouse and children
+
+2.E: On most days, what food does your diet include?
+columns: 
+  diet_include_meat_day0
+  diet_include_dairy_day0
+  diet_include_eggs_day0
+  diet_include_grains_day0
+  diet_include_candy_day0
+  diet_incude_soda_day0
+  diet_include_vegetables_day0
+  diet_includes_homecooked_day0
+  diet_include_ffood_day0
+values: 
+  0: No
+  1: Yes
+
+2.F: Which parts of the challenge are important to you? *
+columns: 
+  reasons_joined_weight_day0
+  reasons_joined_health_day0
+  reasons_joined_energy_day0
+  reasons_joined_science_day0
+values:
+  0: No
+  1: Yes
+
+2.G: What is your confidence level in your ability to follow your assigned diet? *
+column: confidence_day0
+values:
+  1: Very low
+  2: Low
+  3: Neutral
+  4: High
+  5: Very high
+
+
+------------------------------------------------------------------------------------
+[3] 7-Day Survey
+
+This survey was delivered 7 days after a person joined the diet.
+------------------------------------------------------------------------------------
+
+3.A: Today's weight (in pounds) *
+column: weight_lost_percentage_day7
+value: converted to percentage weight loss
+
+3.B: How much of the time during the past week did you have a lot of energy? *
+column: energy_level_day7
+values:
+  5: Almost all of the time
+  4: Most of the time
+  3: A good bit of the time
+  2: A little of the time
+  1: None of the time
+
+3.C: Taken all together, how would you say things have been this week - would you say that you are: *
+column: redacted
+
+3.D: What is your confidence level in your ability to follow your assigned diet over the next week? *
+column: confidence_day7
+values:
+  1: Very low
+  2: Low
+  3: Neutral
+  4: High
+  5: Very high
+
+------------------------------------------------------------------------------------
+[4] 14-Day Survey
+
+This survey was delivered 14 days after a person joined the diet.
+------------------------------------------------------------------------------------
+
+4.A: Today's weight, in pounds.
+column: weight_lost_percentage_day14
+value: converted to percentage weight loss
+
+4.B: How much of the time during the past week did you have a lot of energy? *
+column: energy_level_day14
+values:
+  5: Almost all of the time
+  4: Most of the time
+  3: A good bit of the time
+  2: A little of the time
+  1: None of the time
+
+4.C: Taken all together, how would you say things have been this week - would you say that you are: *
+column: redacted
+
+4.D: How often have you been following that diet over the last week? [completely , at most meals, about half the time, only sometimes, not much at all] *
+column: diet_adherence_frequency_day14
+values: 
+  5: Completely
+  4: At most meals
+  3: About half the time
+  2: Only Sometimes
+  1: Not much at all
+
+4.E: What is your confidence level in your ability to follow your assigned diet over the next week? *
+column: confidence_level_day14
+values: 
+  1: Very low
+  2: Low
+  3: Neutral
+  4: High
+  5: Very high
+
+4.F: Meat: How often have you eaten meat over the last week? *
+column: meat_freq_day14 
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never
+
+4.G: Nuts: How often have you eaten nuts over the last week? *
+column: nuts_freq_day14
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+4.H: Bread and pasta: How often have you eaten bread or pasta over the last week?*
+column: pasta_freq_day14
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+4.I: Beans and legumes: How often have you eaten beans or legumes over the last week?*
+column: legumes_freq_day14
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+4.J: Vegetables: How often have you eaten vegetables over the last week? * 
+column: vegetables_freq_day14
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+4.K: Fruits: How often have you eaten fruits over the last week?
+column: fruits_freq_day14
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+4.L: Dairy: How often have you eaten dairy over the last week? *
+column: dairy_freq_day14
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+4.M: Eggs: How often have you eaten eggs over the last week? *
+column: eggs_freq_day14
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+4.N: Sweets: How often have you eaten sweets over the last week?
+column: sweets_freq_day14
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+4.O: Processed foods: How often have you eaten processed foods over the last week? *
+column: processed_foods_freq_day14
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+
+------------------------------------------------------------------------------------
+[5] 21-Day Survey
+
+This survey was delivered 21 days after a person joined the diet.
+------------------------------------------------------------------------------------
+
+5.A: Today's weight, in pounds.
+column: weight_lost_percentage_day21
+value: converted to percentage weight loss
+
+5.B: How much of the time during the past week did you have a lot of energy? *
+column: energy_level_day21
+values:
+  5: Almost all of the time
+  4: Most of the time
+  3: A good bit of the time
+  2: A little of the time
+  1: None of the time
+
+
+5.C: Taken all together, how would you say things have been this week - would you say that you are: *
+column: redacted
+
+5.D: How often have you been following that diet over the last week? [completely , at most meals, about half the time, only sometimes, not much at all] *
+column: diet_adherence_frequency_day21
+values:
+  5: Completely
+  4: At most meals
+  3: About half the time
+  2: Only Sometimes
+  1: Not much at all
+
+5.E: What is your confidence level in your ability to follow your assigned diet over the next week? *
+column: confidence_level_day21
+values: 
+  1: Very low
+  2: Low
+  3: Neutral
+  4: High
+  5: Very high
+
+5.F: Meat: How often have you eaten meat over the last week? *
+column: meat_freq_day21
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never
+
+5.G: Nuts: How often have you eaten nuts over the last week? *
+column: nuts_freq_day21
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+5.H: Bread and pasta: How often have you eaten bread or pasta over the last week?*
+column: pasta_freq_day21
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+5.I: Beans and legumes: How often have you eaten beans or legumes over the last week?*
+column: legumes_freq_day21
+values: 
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+5.J: Vegetables: How often have you eaten vegetables over the last week? * 
+column: vegetables_freq_day21
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+5.K: Fruits: How often have you eaten fruits over the last week?
+column: fruits_freq_day21
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+5.L: Dairy: How often have you eaten dairy over the last week? *
+column: dairy_freq_day21
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+5.M: Eggs: How often have you eaten eggs over the last week? *
+column: eggs_freq_day21
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+5.N: Sweets: How often have you eaten sweets over the last week?
+column: sweets_freq_day21
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+5.O: Processed foods: How often have you eaten processed foods over the last week? *
+column: processed_foods_freq_day21
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+
+------------------------------------------------------------------------------------
+[6] This is the final Quantified Diet survey!
+
+This survey was delivered 28 days after a person joined the diet.
+------------------------------------------------------------------------------------
+
+6.A: Today's weight, in pounds. *
+column: weight_lost_percentage_day28
+value: converted to percentage weight loss
+
+6.B: Yes, I put myself on a scale when taking this measurement
+column: stepped_on_scale_day28
+values: 0:no 1:yes
+
+6.C: What's your height? 
+columns: 
+  height_feet_day28
+  height_inches_day28
+
+6.D: How much of the time during the past week did you have a lot of energy? *
+column: energy_level_day28
+values:
+  5: Almost all of the time
+  4: Most of the time
+  3: A good bit of the time
+  2: A little of the time
+  1: None of the time
+
+6.E Taken all together, how would you say things have been this week - would you say that you are: *
+column: redacted
+
+6.F: How often have you been following that diet over the last week? [completely , at most meals, about half the time, only sometimes, not much at all] *
+column: diet_adherence_frequency_day28
+values:
+  5: Almost every meal
+  4: Most meals
+  3: About half of meals
+  2: Some meals
+  1: Almost never or never
+
+6.G: Meat: How often have you eaten meat over the last week? *
+column: meat_freq_day28
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never
+
+6.H: Nuts: How often have you eaten nuts over the last week? *
+column: nuts_freq_day28
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+6.I: Bread and pasta: How often have you eaten bread or pasta over the last week?*
+column: pasta_freq_day28
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+6.J: Beans and legumes: How often have you eaten beans or legumes over the last week?*
+column: legumes_freq_day28
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+6.K: Vegetables: How often have you eaten vegetables over the last week? * 
+column: vegetables_freq_day28
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+6.L: Fruits: How often have you eaten fruits over the last week?
+column: fruits_freq_day28
+values: 
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+6.M: Dairy: How often have you eaten dairy over the last week? *
+column: dairy_freq_day28
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+6.N: Eggs: How often have you eaten eggs over the last week? *
+column: eggs_freq_day28
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+6.O: Sweets: How often have you eaten sweets over the last week?
+column: sweets_freq_day28
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+6.P: Processed foods: How often have you eaten processed foods over the last week? *
+column: processed_foods_freq_day28
+values:
+  5: Almost every meal
+  4: Several times per day
+  3: About once per day
+  2: Only a few times
+  1: Never 
+
+6.Q: What meals did you eat regularly? Check off a meal if you ate it five times or more this week.
+columns: 
+  ate_regularly_breakfast_day28
+  ate_regularly_lunch_day28
+  ate_regularly_dinner_day28
+  ate_regularly_snack_day28
+  ate_regularly_dessert_day28
+values: 0: no   1: yes
+
+6.R: On average over the last four weeks, how many hours of sleep did you get each night?
+column: hours_sleep_regularly_day28
+values: 
+  Less than 4 
+  5 
+  6
+  7
+  8
+  9
+  10
+  11 or more
+
+6.S: How often did you exercise over the last four weeks?
+column: exercise_frequency_day28
+values:
+  Everyday
+  5-6 times a week
+  3-4 times a week
+  1-2 times a week
+  Never
+
+6.T: How did your physical activity during the Quantified Diet compare to your usual physical activity?
+column: exercise_relative_to_norm_day28
+values:
+  I exercised more than usual during the Quantified Diet
+  I exercised about the same as I usually do
+  I exercised less than usual during the Quantified Diet
+
+6.U: Did you keep track of what you ate over the last four weeks? Examples: in a food journal, as a note, or by taking a photo
+column: kept_track_of_food_day28
+values:
+  5: Almost every meal
+  4: Most meals
+  3: About half of meals
+  2: Some meals
+  1: Almost never or never
+
+6.V: How often over the last four weeks did you decide not to eat something to reduce your total food intake?
+column: restricted_portions_day28
+values:
+  5: Almost every meal
+  4: Most meals
+  3: About half of meals
+  2: Some meals
+  1: Almost never or never
+
+6.W: Did you count calories over the last four weeks?
+column: counted_calories_day28
+values:
+  5: Almost every meal
+  4: Most meals
+  3: About half of meals
+  2: Some meals
+  1: Almost never or never
+
+6.X: Over the last four weeks, how often did you stop eating even though you had food left on your plate?
+column: stopped_eating_day28
+values:
+  5: Almost every meal
+  4: Most meals
+  3: About half of meals
+  2: Some meals
+  1: Almost never or never
+
+6.Y: Over the last four weeks, how much time did you usually spend eating lunch?
+column: time_spent_eating_lunch_day28
+values: 
+  1: Less than 5 minutes
+  2: 5-15 minutes
+  3: 15-30 minutes
+  4: More than 30 minutes
+
+6.Z: Would you do the diet again?
+column: would_do_diet_again_day28
+values:
+  Yes
+  Maybe
+  No
+
+6.AA: Would you recommend this diet to a friend?
+column: would_recommend_diet_day28
+values:
+  Yes
+  Maybe
+  No

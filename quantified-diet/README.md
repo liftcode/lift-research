@@ -1,7 +1,7 @@
-Lift Quantified Diet Project
+Coach.me Quantified Diet Project
 ============================
 
-Data and analysis projects from [@liftapp](https://lift.do).
+Data and analysis projects from [@coachdotme](https://coach.me).
 
 The Quantified Diet is a project started in 2014 to measure and compare the effectiveness of all popular diets. We're using an experimental design that includes control groups and randomized assignment, both attempts to remove bias from the results.
 
@@ -26,11 +26,11 @@ In analyzing the results, you should take into account the following issues:
 
 Our intention is to release this data so that other people can use it. The default licenses are MIT for code and Creative Commons for data. If you want to use our data:
 
-* Please give attribution. A direct link to the Lift website is preferred: http://lift.do
+* Please give attribution. A direct link to the Coach.me website is preferred: http://coach.me
 * Let us know what you're working on. We'll help you promote it.
 
 # Privacy and Data
 
-All of our data was collected on an agreement with our users that it would be anonymized or aggregated. We've taken care to remove direct links to identity such as email, chronological data such as ordering of results and timestamps, identifying data points that can be tracked back to Lift profiles and truly sensitive answers (given that anonymization of user data is very error prone).
+All of our data was collected on an agreement with our users that it would be anonymized or aggregated. We've taken care to remove direct links to identity such as email, chronological data such as ordering of results and timestamps, identifying data points that can be tracked back to Coach.me profiles and truly sensitive answers (given that anonymization of user data is very error prone).
 
 In particular, we've represented weight change as percentage of weight lost so that people who share their weight loss amount publicly (many did) do not inadvertenly reveal their actual weight.

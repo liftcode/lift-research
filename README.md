@@ -1,7 +1,7 @@
-Lift Research
+Coach.me Research
 =============
 
-Data and analysis projects from [@liftapp](https://lift.do).
+Data and analysis projects from [@coachdotme](https://coach.me).
 
 We collect data on human potential through our goal tracking app and occassionally through additional survey work.
 
@@ -11,7 +11,7 @@ This is a repository for raw data and code for analysis.
 
 Our intention is to release this data so that other people can use it. The default licenses are MIT for code and Creative Commons for data. If you want to use our data:
 
-* Please give attribution. A direct link to the Lift website is preferred: http://lift.do
+* Please give attribution. A direct link to the Lift website is preferred: http://coach.me
 * Let us know what you're working on. We'll help you promote it.
 
 # Privacy and Data
